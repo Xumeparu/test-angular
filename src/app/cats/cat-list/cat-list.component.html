@@ -1,0 +1,19 @@
+<h1>Let's get a cat!</h1>
+<div>
+  <label>
+    <input [(ngModel)]="catCode" (keyup.enter)="getErrors()"/>
+  </label>
+</div>
+<div>
+  <button (click)="getErrors()">Get cat</button>
+  <button (click)="clearCatErrors()">Clear cats</button>
+</div>
+
+<div>
+  <ul>
+    <li *ngFor="let catError of catErrors">
+      <img src="{{catError.image}}" alt="">
+      <button (click)="deleteCatError(catError.id)">x</button>
+    </li>
+  </ul>
+</div>
