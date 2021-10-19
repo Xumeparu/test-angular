@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component } from '@angular/core';
 import { CatError } from '../interfaces';
 
 @Component({
@@ -7,16 +7,14 @@ import { CatError } from '../interfaces';
   styleUrls: ['./cat-list.component.css']
 })
 export class CatListComponent {
+  url = "https://http.cat/";
   catErrors: CatError[] = [];
-
   catCode = "";
   catError = {
     id: "",
     code: this.catCode,
     image: "",
   };
-  url = "https://http.cat/";
-  constructor() { }
 
   getErrors(): CatError[] {
     this.catError = {
@@ -29,7 +27,7 @@ export class CatListComponent {
     return this.catErrors;
   }
 
-  clearCatErrors(): CatError[] {
+  deleteAllCatErrors(): CatError[] {
     return this.catErrors = [];
   }
 
