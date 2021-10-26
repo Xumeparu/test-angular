@@ -3,7 +3,7 @@ import { BrowserModule } from '@angular/platform-browser';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { CatsModule } from './cats/cats.module';
+import { NumbersModule } from './numbers/numbers.module';
 
 @NgModule({
   declarations: [
@@ -12,7 +12,7 @@ import { CatsModule } from './cats/cats.module';
   imports: [
     BrowserModule,
     AppRoutingModule,
-    CatsModule
+    NumbersModule
   ],
   providers: [],
   bootstrap: [AppComponent]
