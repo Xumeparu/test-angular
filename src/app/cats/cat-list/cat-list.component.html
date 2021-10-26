@@ -1,11 +1,11 @@
 <h1>Let's get a cat!</h1>
 <div>
   <label>
-    <input [(ngModel)]="catCode" (keyup.enter)="getErrors()"/>
+    <input [(ngModel)]="catCode" (keyup.enter)="getCatError()"/>
   </label>
 </div>
 <div>
-  <button (click)="getErrors()">Get cat</button>
+  <button (click)="getCatError()">Get cat</button>
   <button (click)="deleteAllCatErrors()">Delete all cats</button>
 </div>
 
