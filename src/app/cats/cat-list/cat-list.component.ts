@@ -9,19 +9,20 @@ import { CatsService } from '../../cats.service';
 })
 export class CatListComponent {
   catErrors: CatError[] = [];
-  catCode = "";
+  catCode = '';
 
   constructor(private catService: CatsService) { }
 
-  async getCatError() {
-    this.catErrors = await this.catService.getCatError(this.catCode);
-  }
-
-  deleteAllCatErrors(): void {
-    this.catService.deleteAllCatErrors();
+  getCatError(): void {
+    this.catErrors = this.catService.getCatError(this.catCode);
+    this.catCode = '';
   }
 
   deleteCatError(id: string): void {
     this.catService.deleteCatError(id);
+  }
+
+  deleteAllCatErrors() : void {
+    this.catService.deleteAllCatErrors();
   }
 }
